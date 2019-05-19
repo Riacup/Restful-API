@@ -33,12 +33,12 @@ class BukuController extends Controller
         $penerbit = $request->penerbit;
         $tahun_terbit = $request->tahun_terbit;
 
-        $buku = Buku::find($id);
+        $Buku = Buku::find($id);
         $Buku->judul = $judul;
         $Buku->penulis = $penulis;
         $Buku->penerbit = $penerbit;
         $Buku->tahun_terbit = $tahun_terbit;
-        $Buku = save();
+        $Buku->save();
 
         return "Data berhasil di Update";
     }
